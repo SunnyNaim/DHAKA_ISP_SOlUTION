@@ -1,0 +1,189 @@
+:root {
+  --primaryColor: #3fd0d4;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.25rem;
+  --lightShadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25);
+  --darkShadow: 4px 10px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* body */
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--mainBlack);
+  background: var(--offWhite);
+  line-height: 1.4;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/*************** global styles **********************/
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+h1 {
+  font-size: 3.3rem;
+}
+h2 {
+  font-size: 2.3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+ table, tr,th,td {
+   border: 1px solid black;
+}
+
+/* buttons */
+.btn-white,
+.btn-primary,
+.collapsible {
+  /* text-transform: uppercase; */
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainWhite);
+  border: 2px solid var(--mainWhite);
+  padding: 0.9rem 1.6rem;
+  display: inline-block;
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+.btn-white:hover {
+  background: var(--mainWhite);
+  color: var(--primaryColor);
+}
+/* button primary */
+.btn-primary {
+  background: var(--primaryColor);
+  color: var(--mainWhite);
+  border-color: var(--primaryColor);
+}
+.btn-primary:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+
+/*************** end of global styles **********************/
+
+
+
+/*************** homepage **********************/
+.homepage {
+  min-height: calc(100vh - 62px);
+  background: var(--primaryColor);
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; 
+}
+
+.homepage input[type=text] {
+  
+  padding: 10px;
+  border: green;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  
+}
+
+.homepage input[type=submit] {
+  
+  padding: 10px;
+  border: green;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  
+}
+.homepage input[type=button] {
+  
+  padding: 10px;
+  border: green;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  
+}
+
+.homepage-banner {
+  text-align: center;
+  color: var(--mainWhite);
+  padding: 0 rem;
+}
+
+.homepage-title {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4rem;
+}
+.homepage-text {
+  width: 85%;
+  margin: 0 auto;
+  letter-spacing: var(--mainSpacing);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(63, 208, 212, 0.7)),
+        to(rgba(0, 0, 0, 0.7))
+      ),
+      url("../images/main.jpg") center/cover no-repeat fixed;
+    background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../images/main.jpg") center/cover no-repeat fixed;
+  }
+  .homepage-title {
+    font-size: 4.5rem;
+  }
+  .homepage-text {
+    width: 70%;
+  }
+}
+
+
+/* Custom search */
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding:  10px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #8372b3;
+}
+
+
+/* End custom search */
+
+
+/*************** end of homepage **********************/
+
