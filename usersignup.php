@@ -77,7 +77,7 @@
                             
 
                             <div>
-                            <button type="submit" class="ui blue button">Submit</button>
+                            <button type="submit" class="new ui blue button">Submit</button>
                             </div>
 
                             
