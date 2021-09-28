@@ -25,7 +25,7 @@ $uid = $_POST['userid'];
     if ($conn->query($sql) === TRUE) {
     printf("<b><b>Issue Report Successful</b></b><br><button >
    
-        <form action='userreport.php' method='post'>
+        <form action='userreportt.php' method='post'>
         <input type='hidden' name='userid' value='".$uid."'> 
         
                                             
