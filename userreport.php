@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="menuinfo">
-                    <a href="usersubscription.php"><button class="ui inverted teal button">SUBCRIPTIONS</button></a>
+                    <a href="usersubscriptions.php"><button class="ui inverted teal button">SUBCRIPTIONS</button></a>
                 </div>
 
                 <div class="menuinfo">
