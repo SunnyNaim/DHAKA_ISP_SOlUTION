@@ -1,393 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="./js1/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css1/styles1.css" />
-    <link href="./css1/sb-admin.css" rel="stylesheet">
-    <title>User-UI</title> 
-
-     <style>
-   
-   table,th,td{
-                border:3px solid blue;
-                border-collapse: collapse;
-                font-size: 20px;
-                color:white;
-				background-color:black;
-				opacity:0.9;  /*to keep the text fixed ,use RGBa color */
-				width:100%;
-				height:100%
-                
-            }
-            th,td{
-                width: 300px;;
-                padding:5px;
-                text-align: center;
-				
-            }
-			th{
-				color:red;
-				background-color:white;
-				opacity:1.0;
-			}
-            tr{
-                
-                height: 50px;
-            }
-            input[type=text] {
-                font-size: 20px;
-                width: 100%;
-                padding: 12px 20px;
-                margin: 8px 0;
-                display: inline-block;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                }
-  
-
-  </style> 
-
-
-</head>
-
-<body>
-
-    <div id="wrapper">
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>User Panel</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">    <!-- semantic-ui cdn -->   <!--bootstrep-->
+        <link rel="stylesheet" href="../css/userstyle.css">
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="topleft">
+              
             </div>
-            <!-- Top Menu Items -->
-
-
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                <li>
-                <a href="#"><i class="fa fa-fw fa-dashboard"></i>
-                        <?php
-
-                                    // $servername = "localhost";
-                                    // $username = "root";
-                                    // $password = "";
-                                    // $dbname = "dhaka isp";
-                                    require_once("db_connection.php");
-
-                                    // $id ='2255566';
-                                    $id = $_GET['userid'];
-                                    //$p ="package4";
-                                    //printf("%s",$id);
-                                    //<input type='hidden' name='ispid' value='".$id."'> 
-                                    print("<form action='userhome.php' method='get'>
-                                    
-                                    <input type='hidden' name='userid' value='".$id."'>                                   
-                                    <input class='btn btn-primary btn-lg' type='submit' value='Home' name='Edit' >
-                                    </form>");
-
-                        ?>
-                        </a>
-
-                </li>
-                   
-                    <li  >
-                        <a href="#"><i class="fa fa-fw fa-dashboard"></i>
-                        <?php
-
-                                    $servername = "localhost";
-                                    $username = "root";
-                                    $password = "";
-                                    $dbname = "dhaka isp";
-
-                                    // $id ='2255566';
-                                    $id = $_GET['userid'];
-                                    //$p ="package4";
-                                    //printf("%s",$id);
-                                    //<input type='hidden' name='ispid' value='".$id."'> 
-                                    print("<form action='userreport.php' method='get'>
-                                    
-                                    <input type='hidden' name='userid' value='".$id."'>                                    
-                                    <input class='btn btn-primary btn-lg' type='submit' value='Issue Report' name='Edit' >
-                                    </form>");
-
-                        ?>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="#"><i class="fa fa-fw fa-dashboard"></i>
-                        <?php
-
-                                    $servername = "localhost";
-                                    $username = "root";
-                                    $password = "";
-                                    $dbname = "dhaka isp";
-
-                                    // $id ='2255566';
-                                    $id = $_GET['userid'];
-                                    //$p ="package4";
-                                    //printf("%s",$id);
-                                    //<input type='hidden' name='ispid' value='".$id."'> 
-                                    print("<form action='usersub.php' method='get'>
-                                    
-                                    <input type='hidden' name='userid' value='".$id."'>                                    
-                                    <input class='btn btn-primary btn-lg' type='submit' value='Subscriptions' name='Edit' >
-                                    </form>");
-
-                        ?>
-                        </a>
-                    </li>
-                     <li>
-                        <a href="#"><i class="fa fa-fw fa-dashboard"></i>  
-                       <?php
-
-                                    $servername = "localhost";
-                                    $username = "root";
-                                    $password = "";
-                                    $dbname = "dhaka isp";
-
-                                    // $id ='2255566';
-                                    $id = $_GET['userid'];
-                                    //$p ="package4";
-                                    //printf("%s",$id);
-                                    //<input type='hidden' name='ispid' value='".$id."'> 
-                                    print("<form action='userbilling.php' method='get'> 
-                                    <input type='hidden' name='userid' value='".$id."'>                          
-                                    <input class='btn btn-primary btn-lg' type='submit' value='Billing' name='Edit' >
-                                    </form>");
-
-                        ?>
-                        </a> 
-
-                    </li>
-
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-dashboard"></i>  
-                       <?php
-
-                                    $servername = "localhost";
-                                    $username = "root";
-                                    $password = "";
-                                    $dbname = "dhaka isp";
-
-                                    // $id ='2255566';
-                                    $id = $_GET['userid'];
-                                    //$p ="package4";
-                                    //printf("%s",$id);
-                                    //<input type='hidden' name='ispid' value='".$id."'> 
-                                    print("<form action='userinfo.php' method='get'> 
-                                    <input type='hidden' name='userid' value='".$id."'>                          
-                                    <input class='btn btn-primary btn-lg' type='submit' value='User INFO' name='Edit' >
-                                    </form>");
-
-                        ?>
-                        </a> 
-
-                    </li>
-
-                    <li>
-
-                    <a href="#"><i class="fa fa-fw fa-dashboard"></i>
-                        <?php
-
-                                    $servername = "localhost";
-                                    $username = "root";
-                                    $password = "";
-                                    $dbname = "dhaka isp";
-
-                                    // $id ='2255566';
-                                    //$id = $_GET['userid'];
-                                    //$p ="package4";
-                                    //printf("%s",$id);
-                                    //<input type='hidden' name='ispid' value='".$id."'> 
-                                    print("<form action='../home/index.php' method='get'>                                  
-                                    <input class='btn btn-primary btn-lg' type='submit' value='Log Out' name='Edit' >
-                                    </form>");
-
-                        ?>
-                        </a>
-
-
-                    </li>
-
-
-                </ul>
-
-                </ul>
+            <div class="topright">
+              
             </div>
-            <!-- /.navbar-collapse -->
-        </nav>
-
-
-
-        <!-- /.container-fluid -->
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Welcome
-                            <small>
-
-                            <?php
-
-                                        $servername = "localhost";
-                                        $username = "root";
-                                        $password = "";
-                                        $dbname = "dhaka isp";
-
-                                        $id = $_GET['userid'];
-                                        //$pass = $_GET['password'];
-                                        
-                                        $conn = new mysqli($servername, $username, $password, $dbname);
-                                        if ($conn->connect_errno) {
-                                          printf("Connect failed: %s\n", $conn->connect_error);
-                                          exit();
-                                        }
-                                      // printf("Connected successfully");
-                                       $query = "SELECT First_Name,Last_Name FROM user where user_id='$id'";
-                                       if ($result = $conn->query($query)) {
-                                       //printf("<br>%d record(s) found!<br>", $result->num_rows);
-                                       /* fetch associative array */
-                                       while ($row = $result->fetch_assoc()) {
-                                         printf("%s %s                 ", $row["First_Name"],$row["Last_Name"] );
-                                       }
-                                       $result->free(); //free result set
-                                       }
-                                       else
-                                       {
-                                         printf("No record found!");
-                                       }
-                                       $conn->close();
-                            ?>
-                            
-                            </small>
-                        </h1>
-                        <ol class="breadcrumb">
-                           <br>
-                            <!-- Table -->
-                            <center><button type="button" class="btn btn-primary btn-lg btn-block">My Info</button></center>   
-                            
-                            <!-- End Table -->
-                        </ol>
-
-                    </div>
+        </div>
+        <div class="main">
+            <div class="menubar">
+                <div class="menuinfo">
+                    <a class="menuinfo" href="../../home/all/index.html"><button class="ui inverted teal button">HOME</button></a>
                 </div>
-                <!-- /.row -->
-               
-                       
-                <?php
 
-                                    $servername = "localhost";
-                                    $username = "root";
-                                    $password = "";
-                                    $dbname = "dhaka isp";
+                <div class="menuinfo">
+                    <a href="userreport.php"><button class="ui inverted teal button">ISSUE REPROT</button></a>
+                </div>
 
-                                   
-                                    $id = $_GET['userid'];
+                <div class="menuinfo">
+                    <a href="usersubscription.php"><button class="ui inverted teal button">SUBCRIPTIONS</button></a>
+                </div>
 
-                                    $conn = new mysqli($servername, $username, $password, $dbname);
-                                    if ($conn->connect_errno) {
-                                      printf("Connect failed: %s\n", $conn->connect_error);
-                                      exit();
-                                    }
-      
-                                    $query = "SELECT First_Name,Last_Name,Email,Address,mobile FROM user WHERE user_id = $id";
-                                      if ($result = $conn->query($query)) {
-                                     
-                                      if($result->num_rows>"0"){
-                                          //print("%s",$row["First_Name"]);
+                <div class="menuinfo">
+                    <a href="userbilling.php"><button class="ui inverted teal button">BILLING</button></button></a>
+                </div>
 
-                                          while ($row = $result->fetch_assoc()) {
-                                              extract($row);
-                                            // print("<form action='page.php' method='get'>
-                                            //             f0:<input type='text' name='CourseID' value='$First_Name'> 
-                                                                                                   
-                                            //             <input type='submit' value='Edit' name='Edit' >
-                                            //         </form>");
-                                            print("<form id='' class='' action='updateinfodatabase.php' method='get'>
-                                                    <h3 class=' text-white pt-5'></h3>
-                        
-                                                    <label for='First_Name' class=''><b>First_Name:</b></label><br>
-                                                        <input type='text' name='First_Name' id='First_Name' value='$First_Name' class='' required>
+                <div class="menuinfo">
+                    <a href="userinfo.php"><button class="active ui inverted teal button">USER INFO</button></a>
+                </div>
 
-                                                        <label for='Last_Name' class='text-white pt-5'><b>Last_Name:</b></label><br required>
-                                                        <input type='text' name='Last_Name' id='Last_Name' value='$Last_Name' class=''>
-
-                                                        <label for='Last_Name' class='text-white pt-5'><b>Email:</b></label><br required>
-                                                        <input type='text' name='Email' id='Last_Name' value='$Email' class=''>
-
-                                                        <label for='Last_Name' class='text-white pt-20'><b>Address:</b></label><br required>
-                                                        <input type='text' name='Address' id='Last_Name' value='$Address' class=''>
-
-                                                        <label for='Last_Name' class='text-white pt-5'><b>Phone No:</b></label><br required>
-                                                        <input type='text' name='mobile' id='Last_Name' value='$mobile' class=''>
-
-                                                        <input type='hidden' name='userid' id='Last_Name' value='$id' class=''>
-                                                    
-                                                    <div class='form-group'>
-                                                        <input type='submit' name='Update' class='btn btn-info btn-md' value='Update Info'>
-                                                    </div>
-                                                </form>");
-
-
-
-                                          }
-                       
-      
-                                      $result->free(); //free result set
-                                      }
-                                      else{
-                                        printf("<h3><b>Requirement not match!</b></h3>");
-                                      }
-                                      }
-                                      else
-                                      {
-                                        printf("No record found!");
-                                      }
-                                      $conn->close();
-
-                        ?>
-                        
-                            
-                            <div class="form-group">
-                      
-  
-               <!-- End row -->
+                <div class="menuinfo">
+                    <a href="logout.php"><button class="ui inverted teal button">LOGOUT</button></a>
+                </div>
 
             </div>
-            <!-- /.container-fluid -->
+            <div class="body">
+                <div class="welcome">
+                    <?php
+                        // starting the session
+                        session_start();
+                        if(isset($_SESSION['userid'])){
+                                $id = $_SESSION['userid'];
+                                // print($id);
+
+                            // connection to the database
+                            require_once("db_connection.php");
+                            $conn = new mysqli($servername, $username, $password, $dbname);
+                            if ($conn->connect_errno) {
+                            printf("Connect failed: %s\n", $conn->connect_error);
+                            exit();
+                            }
+
+                            // performing query selection from database.
+                            $query = "SELECT First_Name,Last_Name FROM user where user_id='$id'";
+                            if ($result = $conn->query($query)) {
+                                        
+                                if($result->num_rows>"0"){
+                                    //print("%s",$row["First_Name"]);
+
+                                    while ($row = $result->fetch_assoc()) {
+                                        extract($row);
+                                        print("<h1>WELCOME &nbsp <span> $First_Name $Last_Name </span></h1>");
+                                    }
+                
+
+                                    $result->free(); //free result set
+                                }
+                                else{
+                                    printf("<h3><b>Requirement not match!</b></h3>");
+                                }
+                            }
+                            else
+                            {
+                                printf("No record found!");
+                            }
+                            
+                        }
+                        else{
+                            print("<h1>please login first<h1>");
+                            exit();
+                                
+                        }
+                    ?>
+                </div>
+                
+                <div class="myinfo">
+                    <h3>MY INFO</h3>
+                </div>
+
+                <div class="info">
+                    <?php
+
+                            
+                                // $id = $_GET['userid'];
+                                // session_start();
+                                // if(isset($_SESSION['userid'])){
+                                //     $id = $_SESSION['userid'];
+                                        print($id);
+                                        // $query = "SELECT First_Name,Last_Name,Email,Address,mobile FROM user WHERE user_id = $id";
+                                        $query = "SELECT * FROM user WHERE user_id = '$id'";
+                        
+
+                                        if ($result = $conn->query($query)) {
+                                            // print($result);
+                                        
+                                            if($result->num_rows>"0"){
+                                                //print("%s",$row["First_Name"]);
+
+                                                while ($row = $result->fetch_assoc()) {
+                                                    extract($row);
+                                                    // print("<form action='page.php' method='get'>
+                                                    //             f0:<input type='text' name='CourseID' value='$First_Name'> 
+                                                                                                        
+                                                    //             <input type='submit' value='Edit' name='Edit' >
+                                                    //         </form>"); 
+                                                    print("<form id='' class='' action='updateinfo.php' method='get'>
+                                                            <!-- <h3 class=' text-white pt-5'></h3> -->
+                                
+                                                                <label for='First_Name' class=''><b>First_Name:</b></label>
+                                                                <br>
+                                                                <input type='text' name='First_Name' id='First_Name' value='$First_Name' class='' required>
+                                                                <br>
+
+                                                                <label for='Last_Name' class=''><b>Last_Name:</b></label> 
+                                                                </br>
+                                                                <input type='text' name='Last_Name' id='Last_Name' value='$Last_Name' class='' required>
+                                                                <br>
+
+                                                                <label for='email' class=''><b>Email:</b></label> 
+                                                                <br>
+                                                                <input type='text' name='Email' id='email' value='$Email' placeholder = 'enter your Email' class=''>
+                                                                <br>
+
+                                                                <label for='address' class=''><b>Address:</b></label> 
+                                                                <br>
+                                                                <input type='text' name='Address' id='address' value='$Address' class='' required> 
+                                                                <br>
+
+                                                                <label for='mobile' class=''><b>Phone No:</b></label> 
+                                                                <br>
+                                                                <input type='text' name='mobile' id='mobile' value='$mobile' class='' required>
+                                                                <br>
+
+                                                                <input type='hidden' name='userid' id='Last_Name' value='$id' class=''>
+                                                            
+                                                            <div class='submit_btn'>
+                                                                <input type='submit' name='Update' class='' value='Update Info'>
+                                                            </div>
+                                                        </form>");
+                                                }
+                            
+
+                                                $result->free(); //free result set
+                                            }
+                                            else{
+                                                printf("<h3><b>Requirement not match!</b></h3>");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            printf("No record found!");
+                                        }
+                                        $conn->close();
+
+                                // }
+                                // else{
+                                //     echo "Plese Login First";
+                                // }
+
+                    ?>
+
+                </div>
+
+            </div>
 
         </div>
-        <!-- /#page-wrapper -->
-
-        <!-- /#page-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="/js1/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/js1/bootstrap.min.css"></script> 
-
-</body>
-
+    </body>
 </html>
