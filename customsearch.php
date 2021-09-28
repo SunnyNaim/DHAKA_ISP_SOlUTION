@@ -1,113 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>DHAKA ISP SOLUTION</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <style>
-      .form-submit-button {
-     background: #0066A2;
-     color: white;
-     border-style: outset;
-     border-color: #0066A2;
-     height: 50px;
-     width: 100px;
-     font: bold 15px arial, sans-serif;
-     text-shadow:none;
-}
-
-    </style>
-
-  </head>
-
-  <body>
-
-    <!-- header -->
-    <!-- Navbar -->
-  <header id="home">
-   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="usersignup.php">User-SIGNUP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="login.php">User-LOGIN</a>
-            </li>
-        </ul>
-    </div>
-    <div class="mx-auto order-0">
-        <!-- <a class="navbar-brand mx-auto" href="#">Navbar 2</a> -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="ispsignup.php">ISP-SIGNUP</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ISPlogin.php">ISP-LOGIN</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<!-- End navbar -->
-    
-      <!-- Homepage component -->
-      <div class="homepage">
-        <div class="homepage-banner">
-          <h1 class="homepage-title">Dhaka ISP SOLUTION</h1>
-          <h2 class="homepage-text">
-            Search your desired ISP:
-          </h2>
-    <!-- Custom Search -->      
-    <div>
-        <form action="customsearchresult.php" method="post">
-               <h5>Select Bandwith Speed</h5>
-               <input type="number" class="form-control form-control-lg" id="form-num" min="1"  max="100" step="1" name="bandwith">
-                    <br>
-                <h5>Select Pricing</h5>
-                 <input type="number" class="form-control form-control-lg" id="form-num" min="100"  max="10000" step="1"name="price">
-                    <br>
-                <h5>Select Area</h5>
-                    <input type="text" class="form-control form-control-lg" id="form-num" name="area" >
-                    <br>  
-                <h5>Select by Rating</h5>
-                <input type="number" class="form-control form-control-lg" id="form-num" min="1"  max="5" step="1" name="rating">
-           <button type="submit" class="btn btn-primary" id="collapsible" value="Search1" name="Search1">
-                 Search </button>
-                     
-             </div>  
-        <div class="return">
-            </form> 
-          <form action="index.php">
-            <button type="submit" class="btn btn-warning">
-                 Hompage Return </button>
-         </form> 
-        </div>          
-<!-- End Custom search --> 
+    <head>
+        <meta charset="utf-8">
+        <title>Dhaka ISP Solution</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">    <!-- semantic-ui cdn -->   <!--bootstrep-->
+        <link rel="stylesheet" href="../css/style.css">
+        <style>
         
-        </div>
-        </div>
-        </div>
 
-      <!-- End OF Homepage component -->
+        </style>
        
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="topleft">
+              <a class="" href="index.html">Home</a>
+              <a href="usersignup.php">USER-SIGNUP</a>
+              <a class="" href="userlogin.php">USER-LOGIN</a>
+            </div>
+            <div class="topright">
+              <a href="ispsignup.php">ISP-SIGNUP</a>
+              <a class="" href="isplogin.php">ISP-LOGIN</a>
+              <a href="mypanel.php">My Profile</a>
+            </div>
+        </div>
 
-    </header>
-    <!-- end of header -->
-   
-    <!-- javascript -->
-    <script src="./js/app.js"></script>
-    
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  </body>
+        <div class="mainbody">
+            <div><h1 class="title">DHAKA ISP SOLUTION</h1></div>
+            <div><h4>Search Your Desire ISP</h4></div>
+           
+        </div>
+
+        <div class="custom">
+                <form action="customsearchresult.php" method="POST">
+                  <div class="customform">
+                      
+                    <label for ="speed">Select bandwith Speed</label>
+                    <input type="number" name="bandwith" id="speed" class="" placeholder="Enter a bandwith speed" min="1"  max="100" step="1" required>
+                    <br>
+
+                    <label for="pricing">Select a price range</label>
+                    <input type="number" name="price" id="pricing" class="" placeholder="Enter a price range" min="100"  max="10000" step="1" required>
+                    <br>
+
+                    <label for="a">Select Your Area</label>
+                    <input type="text" name="area" id="a" class="" placeholder="Enter your local area" required>
+                    <br>
+
+                    <label for="r">Select By Rating</label>
+                    <input type="number" name="rating" id="r" class="" placeholder="Enter a minimum rating for isp" min="0"  max="5" step="1" required>
+
+                    <button type="submit" class="ui violet button">Search</button>
+                  </div>
+                </form>
+            </div>
+
+        </div>
+
+
+
+    </body>
 </html>
